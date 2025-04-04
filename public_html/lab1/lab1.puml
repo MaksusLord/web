@@ -1,0 +1,3 @@
+@startuml lab1
+Иван -> Мария : Привет
+@enduml
