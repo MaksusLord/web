@@ -1,3 +1,32 @@
 @startuml lab1
-Иван -> Мария : Привет
+
+class User{
+    #name: string
+    #login: string
+    -password: string
+    #count: int = 0
+    +showInfo()
+    +__destruct()
+}
+
+class SuperUser{
+    #role: string
+    #count: int = 0
+    +showInfo()
+    +getInfo()
+}
+
+abstract class AbstractUser {
+    {abstract} +showInfo()
+}
+
+interface SuperUserinterface{
+    {abstract} +getInfo()
+}
+
+SuperUserinterface <.. SuperUser : Использует интерфейс
+SuperUser --> User : Наследует свойства
+User --> AbstractUser : Наследует свойства
+
+
 @enduml
