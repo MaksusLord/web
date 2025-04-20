@@ -1,0 +1,21 @@
+CREATE TABLE msgs(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    category INTEGER,
+    description TEXT,
+    source TEXT,
+    datetime INTEGER
+);
+
+CREATE TABLE category(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT
+);
+
+INSERT INTO category (name) VALUES ('Политика');
+INSERT INTO category (name) VALUES ('Культура');
+INSERT INTO category (name) VALUES ('Спорт');
+
+INSERT INTO msgs (title, category, description, source, datetime) VALUES ('Заголовок новости 1', 1, 'Описание новости 1', 'Источник 1', 1678886400);
+INSERT INTO msgs (title, category, description, source, datetime) VALUES ('Заголовок новости 2', 2, 'Описание новости 2', 'Источник 2', 1678890000);
+INSERT INTO msgs (title, category, description, source, datetime) VALUES ('Заголовок новости 3', 3, 'Описание новости 3', 'Источник 3', 1678893600);
